@@ -3,7 +3,7 @@ buildscript{
         springBootVersion = '2.1.7.RELEASE'
     }
     repositories{
-        mavenCentral()               
+        mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -26,6 +26,7 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation 'junit:junit:4.13.1'
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
