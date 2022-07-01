@@ -12,5 +12,4 @@ import lombok.NoArgsConstructor;
 public class PostsUpdateRequestDto {
     private String title;
     private String content;
-//TODO: p.111 보면서 마무리 해야함.
 }
