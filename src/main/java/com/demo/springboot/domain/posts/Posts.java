@@ -1,5 +1,6 @@
 package com.demo.springboot.domain.posts;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Getter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity // 실제 DB의 테이블과 매칭될 클래스이다.
 public class Posts extends BaseTimeEntity {

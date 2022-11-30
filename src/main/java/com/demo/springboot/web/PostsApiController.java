@@ -1,10 +1,13 @@
 package com.demo.springboot.web;
 
 import com.demo.springboot.service.posts.PostsService;
+
 import com.demo.springboot.web.dto.PostsResponseDto;
 import com.demo.springboot.web.dto.PostsSaveRequestDto;
 import com.demo.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
@@ -31,5 +34,10 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id){
         postsService.delete(id);
         return id;
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<String> handle(Exception ex) {
+        return new ResponseEntity<String>("string", HttpStatus.BAD_REQUEST);
     }
 }
